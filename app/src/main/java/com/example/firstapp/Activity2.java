@@ -8,16 +8,19 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class Activity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+        setContentView(R.layout.activity_2);
 
-    public void goToActivityTwo(View view){
-        Log.i("INFO", "Starting" + Activity2.class.getName());
-        Intent intent = new Intent(getApplicationContext(), Activity2.class);
+        TextView tv = findViewById(R.id.textView2);
+
+    }
+    public void goToMainActivity(View view){
+        Log.i("INFO", "Transitioning to" + MainActivity.class.getName());
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+
     }
 }
